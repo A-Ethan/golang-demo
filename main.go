@@ -74,6 +74,9 @@ func uploadHandle(w http.ResponseWriter, req *http.Request) {
 		defer saveFile.Close()
 		// 上传图片成功
 		w.Write([]byte(`<meta charset="utf-8"> 查看上传图片: <a target='_blank' href='/uploaded/` + handle.Filename + "'>" + handle.Filename + "</a>"))
+
+		log.Printf("上传图片成功 /uploaded/%s \n", handle.Filename)
+
 		// 下载图片
 		// fs := http.FileServer(http.Dir(uploadPath))
 		// http.Handle("/download/", http.StripPrefix("/files", fs))
