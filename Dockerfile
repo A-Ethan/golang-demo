@@ -4,11 +4,11 @@ ENV GOPROXY https://goproxy.cn,direct
 ENV GO111MODULE on
 
 ADD ./ /go/src/github.com/A-Ethan/golang-demo
-RUN go get github.com/go-sql-driver/mysql
 
 WORKDIR /go/src/github.com/A-Ethan/golang-demo
 
-RUN CGO_ENABLED=0 GOOS=linux go build main.go -a -installsuffix cgo .
+RUN go mod tidy
+RUN CGO_ENABLED=0 GOOS=linux go build main.go .
 
 EXPOSE 80
 
