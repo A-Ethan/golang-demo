@@ -18,7 +18,7 @@ func main() {
 	fs := http.FileServer(http.Dir("./uploaded"))
 	http.Handle("/uploaded/", http.StripPrefix("/uploaded", fs))
 
-	log.Print("Server started on 0.0.0.0:80, use /upload for uploading files and /files/{fileName} for downloading files.")
+	log.Print("Server started on 0.0.0.0:80")
 	log.Fatal(http.ListenAndServe(":80", nil))
 }
 
