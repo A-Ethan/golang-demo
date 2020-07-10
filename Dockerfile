@@ -8,7 +8,7 @@ ADD ./ /go/src/github.com/A-Ethan/golang-demo
 WORKDIR /go/src/github.com/A-Ethan/golang-demo
 
 RUN go mod tidy
-RUN CGO_ENABLED=0 GOOS=linux go build main.go .
+RUN CGO_ENABLED=0 GOOS=linux go build main.go
 
 EXPOSE 80
 
