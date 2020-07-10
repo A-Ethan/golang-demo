@@ -1,4 +1,4 @@
-FROM golang:1.12.7 as builder
+FROM golang:1.13 as builder
 
 RUN go get github.com/A-Ethan/golang-demo && go get github.com/disintegration/imaging
 RUN go get github.com/go-sql-driver/mysql
