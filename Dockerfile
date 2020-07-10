@@ -1,4 +1,4 @@
-FROM golang:1.13 as builder
+FROM uhub.service.ucloud.cn/hello123/golang:1.13 as builder
 
 ENV GOPROXY https://goproxy.cn,direct
 ENV GO111MODULE on
