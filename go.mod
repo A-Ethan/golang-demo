@@ -1,4 +1,4 @@
-module main
+module github.com/A-Ethan/golang-demo
 
 go 1.13
 
