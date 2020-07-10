@@ -1,5 +1,8 @@
 FROM golang:1.13 as builder
 
+ENV GOPROXY https://goproxy.cn
+ENV GO111MODULE on
+
 RUN go get github.com/A-Ethan/golang-demo && go get github.com/disintegration/imaging
 RUN go get github.com/go-sql-driver/mysql
 
